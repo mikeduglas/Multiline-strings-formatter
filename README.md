@@ -2,7 +2,7 @@
 Multiline strings formatter converts raw multiline text (html, xml, json...) into multiline Clarion string constant.
 It cares about special symbols like a left angle bracket <, a left curly brace {, an apostrophe.
 
-![mlsfmt](https://github.com/mikeduglas/Multiline-strings-formatter/blob/master/screenshots/cmlsfmt.png?raw=true)     
+![mlsfmt](https://github.com/mikeduglas/Multiline-strings-formatter/blob/master/screenshots/mlsfmt.png?raw=true)     
 
 ### Options
 - Remove empty lines: do not include empty lines into the output.
