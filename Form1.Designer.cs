@@ -39,6 +39,7 @@ namespace mlsfmt
             this.cbCopyToClipboard = new System.Windows.Forms.CheckBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cbToUtf16 = new System.Windows.Forms.CheckBox();
+            this.cbApostropheAs39 = new System.Windows.Forms.CheckBox();
             this.txtRawText = new mlsfmt.TextBoxEx();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -58,7 +59,7 @@ namespace mlsfmt
             this.txtFormattedText.Name = "txtFormattedText";
             this.txtFormattedText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtFormattedText.Size = new System.Drawing.Size(987, 318);
-            this.txtFormattedText.TabIndex = 10;
+            this.txtFormattedText.TabIndex = 11;
             this.txtFormattedText.WordWrap = false;
             this.txtFormattedText.TextChanged += new System.EventHandler(this.txtFormattedText_TextChanged);
             // 
@@ -68,7 +69,7 @@ namespace mlsfmt
             this.label1.Location = new System.Drawing.Point(14, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 21);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 8;
             this.label1.Text = "Raw text:";
             // 
             // label2
@@ -77,7 +78,7 @@ namespace mlsfmt
             this.label2.Location = new System.Drawing.Point(14, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 21);
-            this.label2.TabIndex = 9;
+            this.label2.TabIndex = 10;
             this.label2.Text = "Formatted string:";
             // 
             // cbKeepNewLines
@@ -86,7 +87,7 @@ namespace mlsfmt
             this.cbKeepNewLines.Location = new System.Drawing.Point(19, 43);
             this.cbKeepNewLines.Name = "cbKeepNewLines";
             this.cbKeepNewLines.Size = new System.Drawing.Size(146, 25);
-            this.cbKeepNewLines.TabIndex = 4;
+            this.cbKeepNewLines.TabIndex = 5;
             this.cbKeepNewLines.Text = "Keep New lines";
             this.cbKeepNewLines.UseVisualStyleBackColor = true;
             this.cbKeepNewLines.CheckedChanged += new System.EventHandler(this.cbKeepNewLines_CheckedChanged);
@@ -134,7 +135,7 @@ namespace mlsfmt
             this.cbCopyToClipboard.Location = new System.Drawing.Point(409, 43);
             this.cbCopyToClipboard.Name = "cbCopyToClipboard";
             this.cbCopyToClipboard.Size = new System.Drawing.Size(162, 25);
-            this.cbCopyToClipboard.TabIndex = 6;
+            this.cbCopyToClipboard.TabIndex = 7;
             this.cbCopyToClipboard.Text = "Copy to Clipboard";
             this.cbCopyToClipboard.UseVisualStyleBackColor = true;
             // 
@@ -166,10 +167,21 @@ namespace mlsfmt
             this.cbToUtf16.Location = new System.Drawing.Point(225, 43);
             this.cbToUtf16.Name = "cbToUtf16";
             this.cbToUtf16.Size = new System.Drawing.Size(78, 25);
-            this.cbToUtf16.TabIndex = 5;
+            this.cbToUtf16.TabIndex = 6;
             this.cbToUtf16.Text = "Utf-16";
             this.cbToUtf16.UseVisualStyleBackColor = true;
             this.cbToUtf16.CheckedChanged += new System.EventHandler(this.cbToUtf16_CheckedChanged);
+            // 
+            // cbApostropheAs39
+            // 
+            this.cbApostropheAs39.AutoSize = true;
+            this.cbApostropheAs39.Location = new System.Drawing.Point(603, 12);
+            this.cbApostropheAs39.Name = "cbApostropheAs39";
+            this.cbApostropheAs39.Size = new System.Drawing.Size(194, 25);
+            this.cbApostropheAs39.TabIndex = 4;
+            this.cbApostropheAs39.Text = "Apostrophes as <39>";
+            this.cbApostropheAs39.UseVisualStyleBackColor = true;
+            this.cbApostropheAs39.CheckedChanged += new System.EventHandler(this.cbApostropheAs39_CheckedChanged);
             // 
             // txtRawText
             // 
@@ -183,7 +195,7 @@ namespace mlsfmt
             this.txtRawText.Name = "txtRawText";
             this.txtRawText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtRawText.Size = new System.Drawing.Size(987, 311);
-            this.txtRawText.TabIndex = 8;
+            this.txtRawText.TabIndex = 9;
             this.txtRawText.WordWrap = false;
             // 
             // Form1
@@ -191,6 +203,7 @@ namespace mlsfmt
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 788);
+            this.Controls.Add(this.cbApostropheAs39);
             this.Controls.Add(this.cbToUtf16);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.cbRemoveEmptyLines);
@@ -227,6 +240,7 @@ namespace mlsfmt
         private System.Windows.Forms.CheckBox cbCopyToClipboard;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.CheckBox cbToUtf16;
+        private System.Windows.Forms.CheckBox cbApostropheAs39;
     }
 }
 

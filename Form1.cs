@@ -46,10 +46,11 @@ namespace mlsfmt
             if (!cbToUtf16.Checked)
             {
                 string tabString = "        ";
+                string apostropheString = cbApostropheAs39.Checked ? "<39>" : "''";
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    lines[i] = lines[i].Replace("{", "{{").Replace("<", "<<").Replace("'", "''").Replace("\t", tabString);
+                    lines[i] = lines[i].Replace("{", "{{").Replace("<", "<<").Replace("'", apostropheString).Replace("\t", tabString);
                 }
             }
 
@@ -165,6 +166,11 @@ namespace mlsfmt
         }
 
         private void cbToUtf16_CheckedChanged(object sender, EventArgs e)
+        {
+            txtFormattedText.Text = FormatText();
+        }
+
+        private void cbApostropheAs39_CheckedChanged(object sender, EventArgs e)
         {
             txtFormattedText.Text = FormatText();
         }

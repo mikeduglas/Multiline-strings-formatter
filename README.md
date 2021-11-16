@@ -8,6 +8,7 @@ It cares about special symbols like a left angle bracket <, a left curly brace {
 - Remove empty lines: do not include empty lines into the output.
 - Blank first line: prepend the output with blank line for the readability.
 - Smart left trim: shift the output left.
+- Apostrophes as <39>: output apostrophe characters as <39> instead of ''.
 - Keep New lines: append newline characters (<13,10>).
 - Utf-16: output every input character as its Utf-16 representation.
 - Copy to Clipboard: copy the output to the clipboard.
