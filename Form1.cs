@@ -32,8 +32,7 @@ namespace mlsfmt
             // add 1st empty line
             if (cbBlank1stLine.Checked)
             {
-                sb.Append("  '' |");
-                sb.Append(Environment.NewLine);
+                sb.AppendLine("  '' |");
             }
 
             // all raw lines
@@ -45,8 +44,8 @@ namespace mlsfmt
             // handle special chars {, <, ', tabs
             if (!cbToUtf16.Checked)
             {
-                string tabString = "        ";
                 string apostropheString = cbApostropheAs39.Checked ? "<39>" : "''";
+                string tabString = "        ";
 
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -90,7 +89,33 @@ namespace mlsfmt
                         byte lowByte = (byte)(c % 256);
                         byte hiByte = (byte)(c / 256);
 
-                        sbLine.AppendFormat("<{0},{1}>", lowByte, hiByte);
+                        // if hiByte is 0 then show ascii symbol and <0>, otherwise show byte codes
+                        if (hiByte == 0)
+                        {
+                            string sChar;
+
+                            switch ((char)c)
+                            {
+                                case '{':
+                                    sChar = "{{";
+                                    break;
+                                case '<':
+                                    sChar = "<<";
+                                    break;
+                                case '\'':
+                                    sChar = cbApostropheAs39.Checked ? "<39>" : "''";
+                                    break;
+                                case '\t':
+                                    sChar = "<9>";
+                                    break;
+                                default:
+                                    sChar = ((char)c).ToString();
+                                    break;
+                            }
+                            sbLine.AppendFormat("{0}<0>", sChar);
+                        }
+                        else
+                            sbLine.AppendFormat("<{0},{1}>", lowByte, hiByte);
                     }
 
                     lines[i] = sbLine.ToString();

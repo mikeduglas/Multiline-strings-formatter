@@ -1,0 +1,13 @@
+    "items": [{
+      "id": "11111111-2222-3333-4444-555555555555",
+      "name": "Test name",
+      "quantity": 999,
+      "subItems": [{
+          "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "name": "subitem 1"
+        }, {
+          "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
+          "name": "subitem 2"
+        }]
+    }
+  ]
