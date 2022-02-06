@@ -205,5 +205,10 @@ namespace mlsfmt
             if (cbCopyToClipboard.Checked && !string.IsNullOrEmpty(txtFormattedText.Text))
                 Clipboard.SetText(txtFormattedText.Text, TextDataFormat.Text);
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtFormattedText.Text = FormatText();
+        }
     }
 }

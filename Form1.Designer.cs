@@ -40,6 +40,7 @@ namespace mlsfmt
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cbToUtf16 = new System.Windows.Forms.CheckBox();
             this.cbApostropheAs39 = new System.Windows.Forms.CheckBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.txtRawText = new mlsfmt.TextBoxEx();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -53,12 +54,12 @@ namespace mlsfmt
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFormattedText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtFormattedText.Location = new System.Drawing.Point(3, 35);
+            this.txtFormattedText.Location = new System.Drawing.Point(3, 52);
             this.txtFormattedText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFormattedText.Multiline = true;
             this.txtFormattedText.Name = "txtFormattedText";
             this.txtFormattedText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtFormattedText.Size = new System.Drawing.Size(987, 318);
+            this.txtFormattedText.Size = new System.Drawing.Size(987, 301);
             this.txtFormattedText.TabIndex = 11;
             this.txtFormattedText.WordWrap = false;
             this.txtFormattedText.TextChanged += new System.EventHandler(this.txtFormattedText_TextChanged);
@@ -75,7 +76,7 @@ namespace mlsfmt
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 10);
+            this.label2.Location = new System.Drawing.Point(14, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 21);
             this.label2.TabIndex = 10;
@@ -155,6 +156,7 @@ namespace mlsfmt
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnRefresh);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.txtFormattedText);
             this.splitContainer1.Size = new System.Drawing.Size(993, 713);
@@ -182,6 +184,17 @@ namespace mlsfmt
             this.cbApostropheAs39.Text = "Apostrophes as <39>";
             this.cbApostropheAs39.UseVisualStyleBackColor = true;
             this.cbApostropheAs39.CheckedChanged += new System.EventHandler(this.cbApostropheAs39_CheckedChanged);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.Location = new System.Drawing.Point(882, 15);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(100, 30);
+            this.btnRefresh.TabIndex = 12;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // txtRawText
             // 
@@ -241,6 +254,7 @@ namespace mlsfmt
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.CheckBox cbToUtf16;
         private System.Windows.Forms.CheckBox cbApostropheAs39;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 
